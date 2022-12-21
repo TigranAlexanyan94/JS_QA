@@ -1,4 +1,4 @@
-const num = parseInt(prompt("Enter number: "));
+const num = parseInt(prompt("Enter number of rotates: "));
 let multidimensionalArr = [
   [1, 2, 3],
   [4, 5, 6],
@@ -13,6 +13,7 @@ function rotate(array){
       array[i][j] = array[j][i];
       array[j][i] = temp;
     }
+    
   }
   for (let i = array.length - 1; i >= 0; i--) {
     arr.push(array[i])
@@ -29,10 +30,10 @@ function rotateNTimes(array, n){
 
 function print(array){
   for (let index = 0; index < array.length; index++) {
-    console.log(array[index].join(" "))
+    document.write(array[index], '<br/>');
   }
 }
-console.log("===Before===")
+document.write("===Before===", '<br/>');
 print(multidimensionalArr);
-console.log("===After===")
+document.write("===After===", '<br/>');
 print(rotateNTimes(multidimensionalArr, num));

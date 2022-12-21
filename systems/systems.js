@@ -1,6 +1,15 @@
 function systems(num, dividedNum) {
   const obj = { 10: "A", 11: "B", 12: "C", 13: "D", 14: "E", 15: "F" };
   const arr = [];
+
+  do {
+    num = Number(prompt("Plase enter positive number"));
+  } while (num < 0 );
+
+  do {
+    dividedNum = Number(prompt("Please enter 8, 10 or 16"));
+  } while (dividedNum != 8 && dividedNum != 10 && dividedNum != 16);
+
   if (dividedNum == 10) {
     return num;
   } else {
@@ -18,13 +27,14 @@ function systems(num, dividedNum) {
       num = Math.floor(num / dividedNum);
     }
     arr.push(num % dividedNum);
+
+    return arr.reverse().join("");
   }
-  return arr.reverse().join("");
 }
 
-console.log(
+document.write(
   systems(
-    parseInt(prompt("Enter number")),
-    parseInt(prompt("Enter number 8, 10 or 16"))
+    Number(prompt("Enter number")),
+    Number(prompt("Enter number 8, 10 or 16"))
   )
 );

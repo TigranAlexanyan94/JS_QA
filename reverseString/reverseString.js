@@ -6,4 +6,4 @@ function reverseString(str) {
   return string;
 }
 
-console.log(reverseString(prompt("Enter string")));
+document.write(reverseString(prompt("Enter string")));
