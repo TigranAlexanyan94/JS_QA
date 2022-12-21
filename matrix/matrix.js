@@ -13,7 +13,6 @@ function rotate(array){
       array[i][j] = array[j][i];
       array[j][i] = temp;
     }
-    
   }
   for (let i = array.length - 1; i >= 0; i--) {
     arr.push(array[i])
