@@ -1,9 +1,6 @@
 function reverseString(str) {
-  let string = "";
-  for (let i = str.length - 1; i >= 0; i--) {
-    string += str[i];
-  }
-  return string;
+  if(str.length == 0 ) return '';
+  return reverseString(str.substr(1)) + str[0];
 }
 
 document.write(reverseString(prompt("Enter string")));
