@@ -1,39 +1,60 @@
 class Figure:
-    def __init__(self, step):
+    def __init__(self, title, step):
         self.step = step
+        self.title = title
 
-    def Pawn(self):
-        print(self.step)
+    def Pawn(self, title):
+        return title
 
-    def Knight(self):
-        print(self.step)
+    def Knight(self, title):
+        return title
 
-    def Bishop(self):
-        print(self.step)    
+    def Bishop(self, title):
+        return title
 
-    def Rook(self):
-        print(self.step)      
-    
-    def Queen(self):
-        print(self.step)   
+    def Rook(self, title):
+        return title
 
-    def King(self):
-        print(self.step)       
+    def Queen(self, title):
+        return title
 
+    def King(self, title):
+        return title
 
 
 class Board(Figure):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, n, k):
+        self.n = n
+        self.k = k
+        super().__init__(n, k)
 
-    def Pawn(self):
-        super().Pawn()   
+    def chessBoard(self, name):
+        print(name)
+        matrix = [
+            [0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0],
+        ]
+        for i in range(len(matrix)):
+            for j in range(len(matrix)):
+                if self.King("king") == name:
+                    matrix[self.n][self.k] = 1
+                    matrix[self.n+1][self.k-1] = 2
+                    matrix[self.n-1][self.k+1] = 2
+                    matrix[self.n+1][self.k+1] = 2
+                    matrix[self.n-1][self.k-1] = 2
+                    matrix[self.n][self.k-1] = 2
+                    matrix[self.n-1][self.k] = 2
+                    matrix[self.n][self.k+1] = 2
+                    matrix[self.n+1][self.k] = 2    
+                print(matrix[i][j], end=' ')
+            print()
 
-    def Knight(self):
-        super().Pawn()  
 
-
-pawn = Figure(2)
-pawn.Pawn()
-knight = Figure(3)
-knight.Knight()
+board = Board(1,1 )
+board.chessBoard("king")
