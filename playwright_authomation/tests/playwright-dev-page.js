@@ -13,7 +13,8 @@ exports.PlaywrightDevPage = class PlaywrightDevPage {
     this.wishList = page.locator('.entry--notepad > .btn')
     this.chart = page.locator('.entry--cart')
     this.account = page.locator('.btn>>nth=6')
-    this.settings = page.locator('.entry--shop-settings > .btn')
+    // this.settings = page.locator('.entry--shop-settings > .btn')
+    this.supermarket = page.locator('.navigation-main > div.navigation--list-wrapper>>nth=1 > .js--menu-scroller--list > .js--menu-scroller--item>>nth=0 > .desktop-nav-bg>>nth=0')
   }
 
   async goto() {
@@ -56,10 +57,16 @@ exports.PlaywrightDevPage = class PlaywrightDevPage {
     await this.account.click()
   }
 
-  async clickSettings(){
-    console.log(this.settings.innerHTML)
-    await this.settings.click()
+  // async clickSettings(){
+  //   console.log(this.settings.innerHTML)
+  //   await this.settings.click()
+  // }
+
+  async clickSupermarket(){
+    console.log(await this.supermarket)
+    await this.supermarket.click()
   }
+
 
   async pageObjectModel(){
     await this.goto()
@@ -71,6 +78,7 @@ exports.PlaywrightDevPage = class PlaywrightDevPage {
     await this.clickWishList()
     await this.clickChart()
     await this.clickUser()
-    await this.clickSettings()
+    // await this.clickSettings()
+    await this.clickSupermarket()
   }
 }

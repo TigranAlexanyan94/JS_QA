@@ -14,6 +14,7 @@ test('Test for website buy.am header', async ({ page }) => {
   await playwrightDev.clickWishList();
   await playwrightDev.clickChart();
   await playwrightDev.clickAccount();
-  await playwrightDev.clickSettings();
+  // await playwrightDev.clickSettings();
+  await playwrightDev.clickSupermarket()
 });
 
