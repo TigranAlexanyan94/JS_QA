@@ -31,3 +31,4 @@ def test_post_api():
 def test_delete_obj():
     response = requests.delete('https://demoapp-testing.herokuapp.com/users/{255}')
     assert response.status_code == 200
+    
