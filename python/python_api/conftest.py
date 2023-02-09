@@ -2,8 +2,7 @@ import pytest
 import requests
 import json
 
-@pytest.fixture(scope="module", params=['p1','p2'])
-def api_connection(request):
+# def api_connection(request):
     # data= {
     #     "grant_type": "",
     #     "username": "",
@@ -13,4 +12,4 @@ def api_connection(request):
     #     "client_secret": ""
     # }
     # res = requests.post('ttps://demoapp-testing.herokuapp.com/users/login', json.dumps(data))
-    return request.param
+    # return request.param
