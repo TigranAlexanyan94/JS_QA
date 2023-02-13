@@ -1,7 +1,6 @@
-
 const { test, expect } = require('@playwright/test');
 import { PlaywrightDevPage } from './playwright-dev-page';
-​
+
 test('Test for website buy.am header', async ({ page }) => {
   const playwrightDev = new PlaywrightDevPage(page);
   await playwrightDev.goto();
@@ -15,13 +14,13 @@ test('Test for website buy.am header', async ({ page }) => {
   await playwrightDev.clickWishList();
   await expect(page).toHaveURL('https://buy.am/en/register/index/sTarget/note/sTargetAction/index');
   await playwrightDev.goto()
-​
+
   await playwrightDev.clickChart();
   await playwrightDev.clickAccount();
   // await playwrightDev.clickSettings();
   // await playwrightDev.clickSupermarket();
   await playwrightDev.clicklogoButton();
-​
+
   await playwrightDev.clickMuchacho();
   await expect(page).toHaveURL('https://buy.am/hy/muchacho');
   await playwrightDev.goto()
@@ -40,4 +39,6 @@ test('Test for website buy.am header', async ({ page }) => {
   await playwrightDev.clickFoodPark();
   await expect(page).toHaveURL('https://buy.am/hy/listing/manufacturer/sSupplier/1567');
   await playwrightDev.goto();
+
+  await playwrightDev.clickSlide()
 });
