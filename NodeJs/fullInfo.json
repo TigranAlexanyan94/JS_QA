@@ -1,0 +1,100 @@
+[
+    {
+        "firstName": "FirstName1",
+        "lastName": "LastName1",
+        "address": "Address1",
+        "phoneNumber": "PhoneNumber1",
+        "email": "Email1",
+        "rates": {
+            "Mathemathics": 5,
+            "English": 2,
+            "Physics": 3,
+            "Geography": 6,
+            "Algorithms": 2
+        }
+    },
+    {
+        "firstName": "FirstName2",
+        "lastName": "LastName2",
+        "address": "Address2",
+        "phoneNumber": "PhoneNumber2",
+        "email": "Email2",
+        "rates": {
+            "Mathemathics": 5,
+            "English": 2,
+            "Physics": 3,
+            "Geography": 6,
+            "Algorithms": 2
+        }
+    },
+    {
+        "firstName": "FirstNam3",
+        "lastName": "LastName3",
+        "address": "Address3",
+        "phoneNumber": "PhoneNumber3",
+        "email": "Email3",
+        "rates": {
+            "Mathemathics": 5,
+            "English": 2,
+            "Physics": 3,
+            "Geography": 6,
+            "Algorithms": 2
+        }
+    },
+    {
+        "firstName": "FirstName4",
+        "lastName": "LastName4",
+        "address": "Address4",
+        "phoneNumber": "PhoneNumber4",
+        "email": "Email4",
+        "rates": {
+            "Mathemathics": 5,
+            "English": 2,
+            "Physics": 3,
+            "Geography": 6,
+            "Algorithms": 2
+        }
+    },
+    {
+        "firstName": "FirstName5",
+        "lastName": "LastName5",
+        "address": "Address5",
+        "phoneNumber": "PhoneNumber5",
+        "email": "Email5",
+        "rates": {
+            "Mathemathics": 5,
+            "English": 2,
+            "Physics": 3,
+            "Geography": 6,
+            "Algorithms": 2
+        }
+    },
+    {
+        "firstName": "FirstName6",
+        "lastName": "LastName6",
+        "address": "Address6",
+        "phoneNumber": "PhoneNumber6",
+        "email": "Email6",
+        "rates": {
+            "Mathemathics": 5,
+            "English": 2,
+            "Physics": 3,
+            "Geography": 6,
+            "Algorithms": 2
+        }
+    },
+    {
+        "firstName": "FirstName7",
+        "lastName": "LastName7",
+        "address": "Address7",
+        "phoneNumber": "PhoneNumber7",
+        "email": "Email7",
+        "rates": {
+            "Mathemathics": 5,
+            "English": 2,
+            "Physics": 3,
+            "Geography": 6,
+            "Algorithms": 2
+        }
+    }
+]
