@@ -23,6 +23,8 @@ exports.PlaywrightDevPage = class PlaywrightDevPage {
     this.foodPark = page.locator('.emotion--banner>>nth=8')
 
     this.slides = page.locator('.product-slider--container>>nth=3 > .product-slider--item')
+    this.prevBtn = page.locator('.emotion--product-slider > .arrow--prev>>nth=2')
+    this.nextBtn = page.locator('.emotion--product-slider > .arrow--next>>nth=1')
   }
 
   async goto() {
@@ -103,14 +105,23 @@ exports.PlaywrightDevPage = class PlaywrightDevPage {
     await this.foodPark.click()
   }
 
-  async clickSlide(){
-    const slider = await this.slides;
-    const count = await slider.count()
-    console.log(count)
-    // for (let i = 0; i < 12; i++) {
-    //   await x.nth(i).click()
-    // }
+   async clickPrevBtn(){
+    await this.prevBtn.click()
   }
+
+  async clickNextBtn(){
+    await this.nextBtn.click()
+  }
+
+ 
+
+  // async clickSlide(){
+  //   const slider = await this.slides;
+  //   console.log(slider.nth(0).click())
+  //   // for (let i = 0; i < await slider.count(); i++) {
+  //   //   await slider.nth(i).click()
+  //   // }
+  // }
 
   async pageObjectModel(){
     await this.goto()
@@ -134,7 +145,10 @@ exports.PlaywrightDevPage = class PlaywrightDevPage {
     await this.clickPreapa()
     await this.clickFoodPark()
 
-    await this.clickSlide()
+    await this.clickPrevBtn()
+    await this.clickNextBtn()
+
+    // await this.clickSlide()
   }
 }
 
