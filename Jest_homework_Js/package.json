@@ -1,0 +1,17 @@
+{
+  "name": "homework_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "AnagramWors.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chromedriver": "^110.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.4.3"
+  }
+}
