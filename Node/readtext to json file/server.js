@@ -1,48 +1,38 @@
-const console = require("console");
 const fs = require("fs");
-const personalInfo = fs.readFileSync("personalInfo.csv", "utf-8").split(",");
-const rates = fs.readFileSync("rates.csv", "utf-8").split(",");
-// const arr = []
-// personalInfo.split(',').forEach(element => {
-//     fs.writeFile('full.json', JSON.stringify(element), function(err){
-//         if (err) throw err;
-//         console.log('Saved!');
-//     })
-// });
+const personalInfo = fs.readFileSync("personalInfo.csv", "utf-8");
+const rates = fs.readFileSync("rates.csv", "utf-8");
 
-// const arr = personalInfo.split(',')
+function csvToArray(personalInfo, rates) {
+  const lines = personalInfo.split("\n");
+  const ratesLines = rates.split(",");
+  const delimeter = ",";
+  const result = [];
 
-const fullInfoJson = [];
-
-personalInfo.forEach((element) => {
-  rates.forEach((elem) => {
-    fullInfoJson.push({
-      firstName: element,
-      lastName: element,
-      address: element,
-      phoneNumber: element,
-      email: element,
+  for (const line of lines) {
+    const row = line.split(delimeter);
+    const obj = {
+      firstName: row[0],
+      lastName: row[1],
+      address: row[2],
+      phoneNumber: row[3],
+      email: row[4],
       rates: {
-        Mathemathics: elem.split(":")[1],
-        English: elem,
-        Physics: elem,
-        Geography: elem,
-        Algorithms: elem,
+        Mathemathics: ratesLines[0].split(":")[1],
+        English: ratesLines[1].split(":")[1],
+        Physics: ratesLines[2].split(":")[1],
+        Geography: ratesLines[3].split(":")[1],
+        Algorithms: ratesLines[4].split(":")[2],
       },
-    });
-  });
-});
-
-
-
-fs.writeFile(
-  "full.json",
-  JSON.stringify(fullInfoJson, null, 2),
-  function (err) {
-    if (err) throw err;
-    console.log("Saved!");
+    };
+    result.push(obj);
   }
-);
+  return JSON.stringify(result, null, 2);
+}
 
-// console.log(personalInfo);
-// console.log(rates);
+const array = csvToArray(personalInfo, rates);
+
+fs.appendFileSync("data.json", "utf-8");
+
+fs.readFile('data.json', function(err, data){
+    fs.writeFileSync('data.json', array)
+});

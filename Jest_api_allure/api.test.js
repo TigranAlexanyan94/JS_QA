@@ -1,7 +1,7 @@
 const request = require("supertest");
 const app = require("./index");
 
-describe("Users ", () => {
+describe("Users", () => {
   beforeEach(() => {
     reporter
       .epic("API call")
