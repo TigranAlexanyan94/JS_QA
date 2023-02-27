@@ -25,5 +25,6 @@ test("Verify the login functionality C8", async ({ page }) => {
     await expect(page).toHaveURL('https://ecommerce-playground.lambdatest.io/index.php?route=account/login');    
     await page.locator("#input-email").fill('tigran.alexanyan.im@gmail.com');
     await page.locator("#input-password").fill('kjkj');
+    await page.locator(".btn-primary>>nth=2").click();
   });
 });
