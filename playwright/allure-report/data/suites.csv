@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Feb 28 21:48:09 AMT 2023","Tue Feb 28 21:48:18 AMT 2023","9630","chromium","example.spec.js","","","","Structure Login page content C4",""
+"failed","Tue Feb 28 21:48:19 AMT 2023","Tue Feb 28 21:48:42 AMT 2023","23518","firefox","example.spec.js","","","","Structure Login page content C4",""
+"passed","Tue Feb 28 21:48:38 AMT 2023","Tue Feb 28 21:48:49 AMT 2023","10697","webkit","example.spec.js","","","","Structure Login page content C4",""
+"passed","Tue Feb 28 21:48:20 AMT 2023","Tue Feb 28 21:48:36 AMT 2023","15820","firefox","example.spec.js","","","","Verify the login functionality C6",""
+"passed","Tue Feb 28 21:48:09 AMT 2023","Tue Feb 28 21:48:20 AMT 2023","10878","chromium","example.spec.js","","","","Verify the login functionality C6",""
+"passed","Tue Feb 28 21:48:43 AMT 2023","Tue Feb 28 21:48:55 AMT 2023","11992","webkit","example.spec.js","","","","Verify the login functionality C6",""
