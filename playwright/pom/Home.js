@@ -1,4 +1,3 @@
-// const { expect } = require('@playwright/test');
 const constant = require("../constant/constant");
 
 exports.PlaywrightDevPage = class PlaywrightDevPage {
@@ -45,6 +44,6 @@ exports.PlaywrightDevPage = class PlaywrightDevPage {
   }
 
   async alertDangerText(){
-    return await this.alertDanger;
+    await this.alertDanger;
   }
 };

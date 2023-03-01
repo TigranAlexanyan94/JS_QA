@@ -1,6 +1,7 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
 const { PlaywrightDevPage } = require("../pom/Home");
+const selectors = require('../constant/constant')
 
 test.beforeEach(async ({ page }) => {
   const playwrightDev = new PlaywrightDevPage(page);
@@ -25,9 +26,9 @@ test.afterEach(async ({ page }, testInfo) => {
 test("Structure Login page content C4", async ({ page }) => {
   await test.step("Click on the Login button.", async () => {
     const playwrightDev = new PlaywrightDevPage(page);
-    const text = await playwrightDev.newCustomer;
+    const text = await page.locator('h2>>nth=0');
     await expect.soft(text).toHaveText('New Customer')
-    const text1 = await playwrightDev.returnCustomer;
+    const text1 = await page.locator('h2>>nth=1');
     await expect.soft(text1).toHaveText('Returning Customer')
   });
 });
@@ -41,10 +42,10 @@ test("Verify the login functionality C6", async ({ page }) => {
 
     await playwrightDev.fillPassword('kjkj');
     const passwordValue = await playwrightDev.password.inputValue();
-    await expect.soft(passwordValue).toBe('kjkj')
+    await expect.soft(passwordValue).toBe('kjkj');
 
     await playwrightDev.clickLoginBtn();
-    const alertDanger = await playwrightDev.alertDangerText();
+    const alertDanger = page.locator('.alert-danger')
     await expect.soft(alertDanger).toHaveText('Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.');
   });
 });
