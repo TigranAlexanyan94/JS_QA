@@ -27,9 +27,9 @@ test("Structure Login page content C4", async ({ page }) => {
   await test.step("Click on the Login button.", async () => {
     const playwrightDev = new PlaywrightDevPage(page);
     const text = await page.locator('h2>>nth=0');
-    await expect.soft(text).toHaveText('New Customer')
+    await expect(text).toHaveText('New Customer')
     const text1 = await page.locator('h2>>nth=1');
-    await expect.soft(text1).toHaveText('Returning Customer')
+    await expect(text1).toHaveText('Returning Customer')
   });
 });
 
@@ -38,14 +38,14 @@ test("Verify the login functionality C6", async ({ page }) => {
     const playwrightDev = new PlaywrightDevPage(page);
     await playwrightDev.fillEmailAddress('tigran.alexanyan.im@gmail.com');
     const emailValue = await playwrightDev.email.inputValue();
-    await expect.soft(emailValue).toBe('tigran.alexanyan.im@gmail.com')
+    await expect(emailValue).toBe('tigran.alexanyan.im@gmail.com')
 
     await playwrightDev.fillPassword('kjkj');
     const passwordValue = await playwrightDev.password.inputValue();
-    await expect.soft(passwordValue).toBe('kjkj');
+    await expect(passwordValue).toBe('kjkj');
 
     await playwrightDev.clickLoginBtn();
     const alertDanger = page.locator('.alert-danger')
-    await expect.soft(alertDanger).toHaveText('Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.');
+    await expect(alertDanger).toHaveText('Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.');
   });
 });

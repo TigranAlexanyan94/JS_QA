@@ -113,8 +113,6 @@ exports.PlaywrightDevPage = class PlaywrightDevPage {
     await this.nextBtn.click()
   }
 
- 
-
   // async clickSlide(){
   //   const slider = await this.slides;
   //   console.log(slider.nth(0).click())
