@@ -44,6 +44,6 @@ exports.PlaywrightDevPage = class PlaywrightDevPage {
   }
 
   async alertDangerText(){
-    await this.alertDanger;
+    return await this.alertDanger.innerText();
   }
 };
