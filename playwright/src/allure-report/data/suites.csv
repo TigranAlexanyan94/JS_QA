@@ -1,4 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Sat Mar 04 18:28:40 AMT 2023","Sat Mar 04 18:28:43 AMT 2023","2943","","tests/login.spec.js","","","","Verify the login functionality C6",""
-"passed","Sat Mar 04 18:28:37 AMT 2023","Sat Mar 04 18:28:40 AMT 2023","3522","","tests/login.spec.js","","","","Structure Login page content C4",""
-"passed","Sat Mar 04 18:28:37 AMT 2023","Sat Mar 04 18:28:41 AMT 2023","4078","","tests/home.spec.js","","","","jhjhj kjkjkjk ",""
