@@ -12,6 +12,10 @@ test("Get all api under website and collect to file", async ({ page }) => {
       fs.appendFileSync("data.txt", JSON.stringify(request.url()));
     });
 
+    page.on("response", (response) => {
+      fs.appendFileSync("data.txt", JSON.stringify(response.url()));
+    });
+
     await page.goto("https://www.etsy.com/");
 
     await page.click("text=Accept");
