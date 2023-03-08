@@ -34,7 +34,7 @@ class Sea(Product):
 if __name__ == "__main__":
     print("App: Launched with the ConcreteCreator1.")
     ob = Road()
-    ob1=  Sea()
+    ob1= Sea()
     print(ob.operation())
     print(ob1.operation())
    
