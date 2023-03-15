@@ -28,17 +28,17 @@ def test_data_animation(data_driver):
     animation.click()
 
 def test_data_app(data_driver):
-    animation = data_driver.find_element('xpath','//android.widget.TextView[@content-desc="App"]')
-    animation.click()
+    app = data_driver.find_element('xpath','//android.widget.TextView[@content-desc="App"]')
+    app.click()
 
 def test_data_content(data_driver):
-    animation = data_driver.find_element('xpath','//android.widget.TextView[@content-desc="Content"]')
-    animation.click()    
+    content = data_driver.find_element('xpath','//android.widget.TextView[@content-desc="Content"]')
+    content.click()    
 
 def test_data_graphics(data_driver):
-    animation = data_driver.find_element('xpath','//android.widget.TextView[@content-desc="Graphics"]')
-    animation.click()      
+    graphics = data_driver.find_element('xpath','//android.widget.TextView[@content-desc="Graphics"]')
+    graphics.click()      
 
 def test_data_media(data_driver):
-    animation = data_driver.find_element('xpath','//android.widget.TextView[@content-desc="Media"]')
-    animation.click()  
+    media = data_driver.find_element('xpath','//android.widget.TextView[@content-desc="Media"]')
+    media.click()  
